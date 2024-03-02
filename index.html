@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raph - Designer Gráfico</title>
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #120f1d; /* Dark purple background */
+    color: #c4a3ff; /* Light purple text color */
+}
+
+h1 {
+    color: #ddc7df; /* Lighter purple for h1 */
+}
+
+h2 {
+    color: #c4a3ff; /* Darker purple for h2 */
+}
+
+h3 {
+    color: #ddc7df; /* Purple for h3 */
+}
+
+.container {
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1e1932; /* Dark purple background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Dark shadow */
+    text-align: center;
+}
+
+.section {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+}
+
+.abtme, .projects {
+    border: 5px solid #1e1932; /* Dark purple border */
+    background-color: #2d2448; /* Dark purple background */
+    color: #c4a3ff; /* Light purple text color */
+}
+
+.abtmeinfo img {
+    display: block;
+    margin: 0 auto 20px; /* Center image and add spacing */
+    border: 5px solid #1e1932; /* Dark purple border */
+    border-radius: 50%; /* Circular shape */
+    width: 150px; /* Adjust image size */
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -20px; /* Negative margin to offset grid padding */
+}
+
+.grid img {
+    width: calc(50% - 40px); /* 50% width with 20px margin between images */
+    max-width: 300px; /* Maximum width for larger screens */
+    height: auto; /* Maintain aspect ratio */
+    margin: 20px; /* Increased spacing between images */
+    border-radius: 10px; /* Rounded corners */
+    border: 3px solid #1e1932; /* Dark purple border */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.a {
+    margin-top: 15px;
+}
+
+.grid img:hover {
+    transform: scale(1.05); /* Slightly reduce hover effect */
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 600px) {
+    .grid img {
+        width: calc(100% - 40px); /* Full width with reduced padding */
+        margin: 10px 0; /* Adjusted spacing between images */
+    }
+}
+
+/* Styling for the toggle button */
+#toggleButton {
+    background-color: #7c5dd6; /* Purple background */
+    color: #ffffff; /* White text color */
+    padding: 10px 20px; /* Padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor on hover */
+    margin-bottom: 20px; /* Spacing */
+}
+
+.contact-button {
+    position: fixed;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 0;
+    width: 800px;
+}
+
+.contact-button button {
+    background-color: #7c5dd6;
+    color: #ffffff;
+    padding: 10px 0; /* Adjust padding to center text vertically */
+    width: 100%; /* Set width to 100% */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5e4b78;
+}
+
+.cont {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2d2448; 
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Dark shadow */
+    display: none;
+}
+
+.cont img {
+    width: 20vmin;
+    border-radius: 50%;
+}
+
+.one {
+    margin-right: 0.8vmin;
+}
+
+.two {
+    margin-left: 0.8vmin;
+}
+
+.contb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gbb {
+    display: block;
+    width: 100%;
+    margin-top: 2vmin;
+}
+
+.gbb button {
+    width: 100%;
+    color: white;
+    background-color: red;
+    border: 0;
+    padding: 1vmin;
+    cursor: pointer;
+}
+
+.gbb button:hover {
+    width: 100%;
+    color: white;
+    background-color: rgb(209, 0, 0);
+    border: 0;
+    padding: 1vmin;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Raph - Designer Gráfico</h1>
+        
+        <div class="section abtme">
+            <div class="abtmeinfo">
+                <img src="imgs/pfp.jpg" alt="Foto de Perfil">
+                <h2>Sobre Mim:</h2>
+                <p>Olá, meu nome é Raphael. Tenho 18 anos e sou do Rio de Janeiro. Minhas habilidades incluem design gráfico e tradução inglês-português.</p>
+            </div>
+        </div>
+
+        <!-- Toggle button -->
+        <button id="toggleButton">Translate to English</button>
+
+        <div class="section projects">
+            <h2>Projetos:</h2>
+
+            <!-- Seções de projetos aqui -->
+
+            <div class="div">
+                <h3 class="a" style="background-color: #3f3251; padding: 10px; border-radius: 5px;">Flyers de Comida:</h3>
+                <div class="grid">
+                    <img src="imgs/acai.jpg" alt="Panfleto de Açaí">
+                    <img src="imgs/omaga.jpg">
+                    <img src="imgs/hamb.jpg" alt="Panfleto de Hambúrguer">
+                    <img src="imgs/pizza.jpg" alt="Panfleto de Pizza">
+                </div>
+            </div>
+
+            <div class="div">
+                <h3 class="a" style="background-color: #3f3251; padding: 10px; border-radius: 5px;">Flyers de Eletrodomésticos:</h3>
+                <div class="grid">
+                    <img src="imgs/phone.jpg">
+                    <img src="imgs/Screenshot_20240225-134521-660.webp" alt="Panfleto de Eletrodomésticos">
+                </div>
+            </div>
+
+            <div class="div">
+                <h3 class="a" style="background-color: #3f3251; padding: 10px; border-radius: 5px;">Flyers de Esportes:</h3>
+                <div class="grid">
+                    <img src="imgs/esport.jpg" alt="Panfleto de Esportes">
+                </div>
+            </div>
+        </div>
+
+        <!-- Botão "Me Contate" fixo -->
+        <div class="contact-button">
+            <button class="cmb">Me Contate</button>
+        </div>
+    </div>
+
+    <div class="cont">
+    <div class="contb">
+        <a href="https://wa.me/qr/QBIXKKH7GVHYI1"><img class="one"src="data:image/png;base64,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"></a>
+        <a href="https://www.instagram.com/raphhh0?igsh=MXJoZjJpdHQxdDZmYw=="><img class="two"src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/600px-Instagram_icon.png"></a>
+    </div>
+    <div class="gbb">
+        <button class="gb">voltar</button>
+    </div>
+</div>
+
+    <script>
+        const contactButton = document.querySelector('.cmb');
+        const gb = document.querySelector('.gb')
+        const contactSection = document.querySelector('.cont');
+
+        // Add event listener to the button
+        contactButton.addEventListener('click', function() {
+            // Toggle the visibility of the contact section
+            contactSection.style.display = contactSection.style.display === 'block' ? 'none' : 'block';
+        });
+
+        gb.addEventListener('click', function() {
+            // Toggle the visibility of the contact section
+            contactSection.style.display = contactSection.style.display === 'block' ? 'none' : 'block';
+        });
+    </script>
+</body>
+</html>
